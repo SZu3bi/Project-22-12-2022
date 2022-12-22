@@ -1,0 +1,150 @@
+.card-uicomponents {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1px auto;
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  opacity: 1;
+
+  .cards-wrappercards {
+    opacity: 1;
+    margin-top: 2%;
+    width: 100%;
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    opacity: 1;
+    @media only screen and (max-width: 750px) {
+      opacity: 1;
+      margin-top: 2%;
+      width: 139%;
+      background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+      opacity: 1;
+    }
+
+    .title {
+      display: flex;
+      width: 100%;
+      @media (max-width: 770px) {
+        display: block;
+      }
+      .info {
+        width: 50%;
+        margin: 10px 20px;
+        font-size: 30px;
+        color: #2b0649;
+      }
+    }
+  }
+
+  .flex-center {
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 770px) {
+      display: block;
+    }
+
+    .three-element {
+      display: flex;
+      overflow-x: hidden;
+      border: 5px solid #ffffff;
+      border-radius: 10px;
+      width: 90%;
+      justify-content: center;
+      @media (max-width: 770px) {
+        display: flex;
+        overflow-x: hidden;
+        border: 5px solid #ffffff;
+        border-radius: 10px;
+        justify-content: center;
+        width: auto;
+      }
+
+      .contentcard {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        color: black;
+      }
+    }
+
+    .ContentWrapper {
+      display: flex;
+      overflow-x: hidden;
+      border: 0px solid #ffffff;
+      border-radius: 10px;
+      scroll-behavior: smooth;
+      //   width: 70%;
+      width: 50%;
+      padding: 4%;
+      box-shadow: 0px 0px 32px 7px #989898;
+
+      .card-1 {
+        display: inline-flex;
+        align-content: space-between;
+        flex-wrap: nowrap;
+        align-items: center;
+        .dotnumcard {
+          width: 25rem;
+          height: 20rem;
+          padding: 1%;
+          margin: 2%;
+          background: #f1c40f 0% 0% no-repeat padding-box;
+          box-shadow: 0px 3px 20px rgb(0 0 0 / 87%);
+          border-radius: 10px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+
+  .basebtnss {
+    box-shadow: 3px 3px 12px #0000004f;
+    border-radius: 10px;
+    width: 35px;
+    height: 35px;
+    color: black;
+    background: white;
+    margin: 2%;
+  }
+
+  .dir {
+    display: flex;
+    .buttons-1 {
+      margin: 5%;
+    }
+  }
+}
+
+.addButton {
+  display: flex;
+  justify-content: center;
+}
+
+.textfield {
+  padding: 1%;
+}
+
+.deleteButton {
+  display: flex;
+  justify-content: center;
+}
+
+.count {
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+  font-family: fantasy;
+  font-size: 25px;
+}
+
+
+.div1{
+  display: flex;
+  justify-content: center;
+  margin-top: -23%;
+}
