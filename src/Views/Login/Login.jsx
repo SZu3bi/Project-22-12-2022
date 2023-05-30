@@ -25,8 +25,8 @@ export const Login = () => {
 
   const [states, setStates] = useState({
     db:"odoo15",
-    username: "salahslah2122@gmail.com",
-    password: "123",
+    username: "samjad@gmail.com",
+    password: "Cover112233",
     token: "",
     showPassword: false,
     username2: "Zaid-Lawi@gmail.com",
@@ -69,7 +69,7 @@ export const Login = () => {
     if (states.username === "Zaid-Lawi@gmail.com") {
       axios
         .post(
-          `${configlogin.server_address}?grant_type=${configlogin.RESPONSE_TYPE}&client_id=${configlogin.CLIENT_ID}&client_secret=${configlogin.client_Secret}&username=${states.username}&password=${states.password}k89xVUWApVLgGwWulAcb336Kd`
+          `${configlogin.server_address}?grant_type=${configlogin.RESPONSE_TYPE}&client_id=${configlogin.CLIENT_ID}&client_secret=${configlogin.client_Secret}&username=${states.username}&password=${states.password}bcLjGkX1B65o0gRxdH2L4FLC8`
         )
         .then((response) => {
           settokenapi(response.data.access_token);
@@ -87,12 +87,13 @@ export const Login = () => {
     } else {
       axios
         .post(
-          `${configlogin.server_address}?grant_type=${configlogin.RESPONSE_TYPE}&client_id=${configlogin.CLIENT_ID}&client_secret=${configlogin.client_Secret}&username=${states.username}&password=${states.password}amT78fpsBV2H2idIDkyLMGAP6`
+          `${configlogin.server_address}?grant_type=${configlogin.RESPONSE_TYPE}&client_id=${configlogin.CLIENT_ID}&client_secret=${configlogin.client_Secret}&username=${states.username}&password=${states.password}bcLjGkX1B65o0gRxdH2L4FLC8`
         )
         .then((response) => {
           setcheck(response.status);
 
           settokenapi(response.data.access_token);
+          console.log(check);
           localStorage.setItem("tokenapi", JSON.stringify(tokenapi));
           setTimeout(() => {
             h.push("/Landing");
@@ -123,10 +124,10 @@ export const Login = () => {
     setcmp(true);
   };
 
-  // useEffect(() => {
-  //   if (tokenapi !== undefined)
-  //     localStorage.setItem("tokenapi", JSON.stringify(tokenapi));
-  // }, [tokenapi]);
+  useEffect(() => {
+    if (tokenapi !== undefined)
+      localStorage.setItem("tokenapi", JSON.stringify(tokenapi));
+  }, [tokenapi]);
 
   var retrievedObject = localStorage.getItem("tokenapi");
 
@@ -223,7 +224,7 @@ export const Login = () => {
                 // isActive ? "button" : "errorbutton"
               }
               type="submit"
-              onClick={LoginButton}
+              onClick={login}
             >
               Log in
             </button>

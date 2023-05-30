@@ -6,6 +6,8 @@ import { Contact } from './Views/Contact/Contact';
 import { Menu } from '../src/Views/Menu/Menu';
 import { Landing } from './Views/Landing';
 import Blank from './Views/pages/Blank';
+import { NewLogin } from './Views/NewLogin/NewLogin';
+import { NewContact } from './Views/NewContact';
 
 function App() {
   return (
@@ -15,8 +17,8 @@ function App() {
 
     <Route path="/Blank" component={Blank} />
     <Route path="/Contact" component={Contact} />
-    <Route path="/Landing" component={Landing} />
-    <Route path="/" component={Login} />
+    <Route path="/Landing" component={NewContact} />
+    <Route path="/" component={NewLogin} />
 
     </Switch >
 

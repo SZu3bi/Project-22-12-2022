@@ -36,6 +36,7 @@ import SupervisorAccountIcon from "@material-ui/icons/SupervisorAccount";
 import { Rating, Skeleton } from "@mui/material";
 import { StayPrimaryLandscapeOutlined } from "@material-ui/icons";
 import { ToastContainer } from "react-toastify";
+import { ContactPageupsert } from "../Contact";
 export const Landing = () => {
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down("l"));
@@ -81,6 +82,13 @@ export const Landing = () => {
     qy: null,
   });
 
+  const [open, setOpen] = useState(false);
+  const [EditVal, setEditVal] = useState();
+
+
+  const openvalchangeContact = () => {
+    setOpen(false);
+  };
   const hundle = () => {
     if (states.name !== "") {
       handleCreateButtons_2();
@@ -171,13 +179,15 @@ export const Landing = () => {
   // useEffect(() => {
   //   if (effectRun.current === false) {
   //     showError("Please Login");
-
+  //     h.replace("/Login");
   //     GetAllData();
   //   }
   //   return () => {
   //     effectRun.current = true;
   //   };
   // }, [GetAllData]);
+
+  
   useEffect(() => {
     if (JSON.parse(localStorage.getItem("tokenapi"))) {
       GetAllData();
@@ -198,6 +208,17 @@ export const Landing = () => {
       <div>
         <Menu />
       </div>
+      <div>
+
+{open && (
+  <ContactPageupsert
+    open={open}
+    DTO={EditVal}
+    GetAllData={() => GetAllData()}
+    openvalchangeContact={openvalchangeContact}
+  />
+)}
+</div>
       <div className="addButton">
         <Button
           onClick={() => {
@@ -311,6 +332,17 @@ export const Landing = () => {
                                     >
                                       <DeleteForeverIcon />
                                     </Button>
+                                    <Button
+                          style={{ margin: "1%" }}
+                          variant="contained"
+                          color="primary"
+                          onClick={() => {
+                            setOpen(true);
+                            setEditVal(s);
+                          }}
+                        >
+                          Edit
+                        </Button>
                                   </div>
                                 </div>
                               </div>

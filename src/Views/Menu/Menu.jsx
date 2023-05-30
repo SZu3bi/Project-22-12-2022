@@ -27,11 +27,11 @@ export const Menu = () => {
     <div class="wrapper">
    <nav class="nav nav1">
    
-      <a href="" class="nav-item active" data-color="#663399"><HomeIcon/></a>
+      <a href="/Landing" class="nav-item active" data-color="#663399"><HomeIcon/></a>
       <a href="" class="nav-item" data-color="#446A46"><InfoIcon/></a>
       <a href="" class="nav-item" data-color="#D82148"><BugReportIcon/></a>
       <a href="" class="nav-item" data-color="#FFB72B" onClick={() => logout()} ><ExitToAppIcon/></a>
-      <a href="" class="nav-item" data-color="#1C0A00"><ContactsIcon/></a>
+      <a href="/Contact" class="nav-item" data-color="#1C0A00"><ContactsIcon/></a>
       <span class="nav-indicator"></span>
    </nav>
 </div>

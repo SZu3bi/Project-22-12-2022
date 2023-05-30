@@ -1,2 +1,2 @@
-export * from './Contact';
+export * from './NewContact';
 export * from './ContactPageupsert';
