@@ -30,7 +30,7 @@ export const NewMenu = () => {
 <nav id="menu">
   <div class="menu-item">
     <div class="menu-text">
-      <a href="#">Home</a>
+      <a href="/Landing">Home</a>
     </div>
     <div class="sub-menu">
       <div class="icon-box">
@@ -66,7 +66,7 @@ export const NewMenu = () => {
   </div>
   <div class="menu-item highlight">
     <div class="menu-text">
-      <a href="#">Services</a>
+      <a href="/Blank">Services</a>
     </div>
     <div class="sub-menu double">
       <div class="icon-box gb a">
